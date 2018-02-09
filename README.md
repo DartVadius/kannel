@@ -76,7 +76,7 @@ system-type = ""
 
 enquire-link-interval = 30
 
-log-file = "/var/log/kannel/smsc-bulkness.log"
+log-file = "/var/log/kannel/smsc-bulkness.log" #логи смс-рассылок смотрим здесь
 
 log-level = 0
 
