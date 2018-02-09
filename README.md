@@ -106,3 +106,11 @@ http://127.0.0.1:13000/status
 # пример отправки сообщения из консоли курлом / send sms example
 
 curl  "http://127.0.0.1:13003/cgi-bin/sendsms?user=foo&pass=bar&text=Hello&to=380505554411&from=Test"
+
+# смотрим логи рассылок
+
+смотрим тут /var/log/kannel/smsc-bulkness.log
+
+submit_sm, submit_sm_resp постановка сообщения в очередь (запрос от клиента, ответ от сервера)
+
+deliver_sm, deliver_sm_resp отчет об отправке сообщения (запрос от сервера, ответ от клиента)
