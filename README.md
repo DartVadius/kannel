@@ -1,16 +1,16 @@
 # kannel ubuntu 16.04
 
-install kannel 
+#install kannel 
 
 sudo apt-get update
 
 sudo apt-get install kannel
 
-# редактируем конфиг
+# редактируем конфиг / update config
 
 sudo gedit /etc/kannel/kannel.conf
 
-# пример конфига
+# пример конфига / config example
 
 group = core
 
@@ -44,7 +44,7 @@ concatenation = true
 
 max-messages = 20
 
-#тут настройки оператора смс-рассылок 
+#тут настройки оператора смс-рассылок / config from sms operator
 
 group = smsc
 
@@ -64,7 +64,7 @@ transceiver-mode = 1
 
 smsc-username = "username"
 
-smsc-password = "password" #!!!длина пароля не должна превышать 8 символов!!!
+smsc-password = "password" #!!!длина пароля не должна превышать 8 символов!!! password length must be no more than 8 chars
 
 source-addr-autodetect = 1
 
@@ -80,22 +80,22 @@ log-file = "/var/log/kannel/smsc-bulkness.log"
 
 log-level = 0
 
-# добавляем автозагрузку смс-бокса
+# добавляем автозагрузку смс-бокса / add sms-box autoload
 
-sudo gedit /etc/default/kannel и расскоментируем строку START_SMSBOX=1
+sudo gedit /etc/default/kannel и расскоментируем строку START_SMSBOX=1 / uncomment string START_SMSBOX=1
 
-# перезапускаем канел
+# перезапускаем канел / restart kannel
 
 /etc/init.d/kannel stop
 
 /etc/init.d/kannel start
 
-вариант /etc/init.d/kannel restart у меня работал криво
+вариант /etc/init.d/kannel restart у меня работал криво 
 
-# проверка статуса 
+# проверка статуса / check status
 
 http://127.0.0.1:13000/status
 
-# пример отправки сообщения из консоли курлом
+# пример отправки сообщения из консоли курлом / send sms example
 
 curl  "http://127.0.0.1:13003/cgi-bin/sendsms?user=foo&pass=bar&text=Hello&to=380505554411&from=Test"
