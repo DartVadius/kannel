@@ -92,6 +92,13 @@ sudo gedit /etc/default/kannel и расскоментируем строку ST
 
 вариант /etc/init.d/kannel restart у меня работал криво 
 
+если не запускается, останавливаем канел и стартуем боксы вручную
+
+sudo /usr/sbin/bearerbox /etc/kannel/kannel.conf
+
+sudo /usr/sbin/smsbox /etc/kannel/kannel.conf
+
+
 # проверка статуса / check status
 
 http://127.0.0.1:13000/status
