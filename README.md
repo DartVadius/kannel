@@ -10,7 +10,7 @@ sudo apt-get install kannel
 
 sudo gedit /etc/kannel/kannel.conf
 
-#пример конфига
+# пример конфига
 
 group = core
 
@@ -80,4 +80,22 @@ log-file = "/var/log/kannel/smsc-bulkness.log"
 
 log-level = 0
 
+# добавляем автозагрузку смс-бокса
 
+sudo gedit /etc/default/kannel и расскоментируем строку START_SMSBOX=1
+
+# перезапускаем канел
+
+/etc/init.d/kannel stop
+
+/etc/init.d/kannel start
+
+вариант /etc/init.d/kannel restart у меня работал криво
+
+# проверка статуса 
+
+http://127.0.0.1:13000/status
+
+# пример отправки сообщения из консоли курлом
+
+curl  "http://127.0.0.1:13003/cgi-bin/sendsms?user=foo&pass=bar&text=Hello&to=380505554411&from=Test"
