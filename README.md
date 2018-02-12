@@ -26,7 +26,7 @@ log-file = "/var/log/kannel/kannel.log" #путь к лог файлу
 
 log-level = 0 #уровень логирования 0 'debug', 1 'info', 2 'warning, 3 'error' and 4 'panic' 
 
-dlr-storage = internal #система хранения сообщений, поддерживает internal, mysql, pgsql, sdb, mssql, oracle
+dlr-storage = internal #система хранения сообщений (delivery report, DLR), поддерживает internal, mysql, pgsql, sdb, mssql, oracle
 
 store-type = file # система хранения сообщений перед обработкой, file - логи пишутся в один файл, spool - логи пишутся в отдельные файлы, она запись - один файл
 
