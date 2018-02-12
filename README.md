@@ -46,7 +46,7 @@ max-messages = 20
 
 #тут настройки оператора смс-рассылок / config from sms operator
 
-#transceiver mode
+# transceiver mode
 
 group = smsc
 
@@ -82,9 +82,9 @@ log-file = "/var/log/kannel/smsc-bulkness.log" #логи смс-рассылок
 
 log-level = 0
 
-#transmitter + reciver mode 
+# transmitter + reciver mode 
 
-#transmitter
+# transmitter
 
 group = smsc
 
@@ -122,7 +122,7 @@ log-file = "/var/log/kannel/smsc-bulkness.log"
 
 log-level = 0
 
-#reciver
+# reciver
 
 group = smsc
 
