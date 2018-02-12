@@ -198,8 +198,8 @@ curl  "http://127.0.0.1:13003/cgi-bin/sendsms?user=foo&pass=bar&text=Hello&to=38
 
 смотрим тут /var/log/kannel/smsc-bulkness.log
 
-submit_sm, submit_sm_resp постановка сообщения в очередь (запрос от клиента, ответ от сервера)
+submit_sm, submit_sm_resp отправка сообщения поставщику услуг (запрос от клиента, ответ от сервера)
 
-deliver_sm, deliver_sm_resp отчет об отправке сообщения (запрос от сервера, ответ от клиента)
+deliver_sm, deliver_sm_resp отчет об отправке сообщения от поставщика услуг (запрос от сервера, ответ от клиента)
 
 request-ы - response-ы идентифицируются между собой по строке sequence_number
