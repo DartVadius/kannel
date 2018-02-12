@@ -38,7 +38,7 @@ group = smsbox
 
 bearerbox-host = "127.0.0.1"
 
-sendsms-port = 13003
+sendsms-port = 13003 # порт для обработки запросов на отрпавку смс
 
 group = sendsms-user
 
@@ -68,7 +68,7 @@ host = "smpp05.bulkness.com"
 
 port = 8887
 
-transceiver-mode = 1 # включение/отключение трансресивного типа подключения
+transceiver-mode = 1 # включение/отключение трансресиверного типа подключения
 
 smsc-username = "username"
 
@@ -110,9 +110,9 @@ receive-port = 0
 
 transceiver-mode = 0
 
-smsc-username = "vad261c1fc"
+smsc-username = "username"
 
-smsc-password = "qwerty66"
+smsc-password = "password"
 
 source-addr-autodetect = 1
 
@@ -148,9 +148,9 @@ receive-port = 8887
 
 transceiver-mode = 0
 
-smsc-username = "vad261c1fc"
+smsc-username = "username"
 
-smsc-password = "qwerty66"
+smsc-password = "password"
 
 source-addr-autodetect = 1
 
