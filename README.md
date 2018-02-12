@@ -12,21 +12,25 @@ sudo gedit /etc/kannel/kannel.conf
 
 # пример конфига / config example
 
+# конфигурация ядра (bearerbox)
+
 group = core
 
-admin-port = 13000 #порт для проверки состояний подключений
+admin-port = 13000 #порт для проверки состояний подключений и администрирования, рекомендовано > 1023 
 
 smsbox-port = 13001 #порт для подклчения смс-боксов
 
-admin-password = 1
+admin-password = 1234 #админ пароль для администрирования через http интерфейс
 
-log-file = "/var/log/kannel/kannel.log"
+log-file = "/var/log/kannel/kannel.log" #путь к лог файлу 
 
-log-level = 0
+log-level = 0 #уровень логирования 0 'debug', 1 'info', 2 'warning, 3 'error' and 4 'panic' 
 
 dlr-storage = internal
 
-store-file = "/var/log/kannel/kannel.store"
+store-type = file # система хранения сообщений перед обработкой, file - логи пишутся в один файл, spool - логи пишутся в отдельные файлы, она запись - один файл
+
+store-location = "/var/log/kannel/kannel.store"
 
 group = smsbox
 
