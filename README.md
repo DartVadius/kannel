@@ -26,11 +26,13 @@ log-file = "/var/log/kannel/kannel.log" #путь к лог файлу
 
 log-level = 0 #уровень логирования 0 'debug', 1 'info', 2 'warning, 3 'error' and 4 'panic' 
 
-dlr-storage = internal
+dlr-storage = internal #система хранения сообщений, поддерживает internal, mysql, pgsql, sdb, mssql, oracle
 
 store-type = file # система хранения сообщений перед обработкой, file - логи пишутся в один файл, spool - логи пишутся в отдельные файлы, она запись - один файл
 
-store-location = "/var/log/kannel/kannel.store"
+store-location = "/var/log/kannel/kannel.store" # путь к логам, в зависимости от выбранного типа
+
+# конфигурация smsbox для отправки сообщений по протоколу http
 
 group = smsbox
 
@@ -44,17 +46,17 @@ username = foo
 
 password = bar
 
-concatenation = true
+concatenation = true # сбор большого сообщения из частей, если false части сообщения отдаются как отдельные sms
 
-max-messages = 20
+max-messages = 20 # максимум сообщений, отрпавляемых при разбивке одного длинного сообщения на части
 
-#тут настройки оператора смс-рассылок / config from sms operator
+#тут настройки смс центра smsbox от оператора смс-рассылок / config from sms operator
 
 # transceiver mode
 
 group = smsc
 
-smsc = smpp
+smsc = smpp # тип смс центра
 
 smsc-id = gw-bulkness
 
@@ -66,21 +68,21 @@ host = "smpp05.bulkness.com"
 
 port = 8887
 
-transceiver-mode = 1
+transceiver-mode = 1 # включение/отключение трансресивного типа подключения
 
 smsc-username = "username"
 
 smsc-password = "password" #!!!длина пароля не должна превышать 8 символов!!! password length must be no more than 8 chars
 
-source-addr-autodetect = 1
+source-addr-autodetect = 1 # пытается проверить исходный адрес и соответственно установить настройки TON и NPI
 
-dest-addr-ton = 1
+dest-addr-ton = 1 # подключение ton адресса назначения для ссылки ton - номер без префикса??
 
-dest-addr-npi = 1
+dest-addr-npi = 1 # подключение npi адресса назначения для ссылки npi - National Provider Identifier
 
 system-type = ""
 
-enquire-link-interval = 30
+enquire-link-interval = 30 # интервал проверки на активный сеанс 
 
 log-file = "/var/log/kannel/smsc-bulkness.log" #логи смс-рассылок смотрим здесь
 
