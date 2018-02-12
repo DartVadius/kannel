@@ -46,6 +46,8 @@ max-messages = 20
 
 #тут настройки оператора смс-рассылок / config from sms operator
 
+#transceiver mode
+
 group = smsc
 
 smsc = smpp
@@ -79,6 +81,85 @@ enquire-link-interval = 30
 log-file = "/var/log/kannel/smsc-bulkness.log" #логи смс-рассылок смотрим здесь
 
 log-level = 0
+
+#transmitter + reciver mode 
+
+#transmitter
+
+group = smsc
+
+smsc = smpp
+
+smsc-id = gw-bulkness
+
+#smsc-admin-id = gw-bulkness
+
+allowed-smsc-id = gw-bulkness
+
+host = "smpp05.bulkness.com"
+
+port = 8887
+
+receive-port = 0
+
+transceiver-mode = 0
+
+smsc-username = "vad261c1fc"
+
+smsc-password = "qwerty66"
+
+source-addr-autodetect = 1
+
+dest-addr-ton = 1
+
+dest-addr-npi = 1
+
+system-type = ""
+
+enquire-link-interval = 30
+
+log-file = "/var/log/kannel/smsc-bulkness.log"
+
+log-level = 0
+
+#reciver
+
+group = smsc
+
+smsc = smpp
+
+smsc-id = gw-bulkness-r
+
+#smsc-admin-id = gw-bulkness
+
+allowed-smsc-id = gw-bulkness-r
+
+host = "smpp05.bulkness.com"
+
+port = 0
+
+receive-port = 8887
+
+transceiver-mode = 0
+
+smsc-username = "vad261c1fc"
+
+smsc-password = "qwerty66"
+
+source-addr-autodetect = 1
+
+dest-addr-ton = 1
+
+dest-addr-npi = 1
+
+system-type = ""
+
+enquire-link-interval = 30
+
+log-file = "/var/log/kannel/smsc-bulkness.log"
+
+log-level = 0
+
 
 # добавляем автозагрузку смс-бокса / add sms-box autoload
 
