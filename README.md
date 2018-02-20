@@ -13,15 +13,15 @@ sudo gedit /etc/kannel/kannel.conf
 # пример конфига / config example
 
 
-group = core
-admin-port = 13000
-smsbox-port = 13001
-admin-password = 1234
-log-file = "/var/log/kannel/kannel.log"
-log-level = 0
-dlr-storage = internal
-store-type = file
-store-location = "/var/log/kannel/kannel.store"
+group = core  
+admin-port = 13000  
+smsbox-port = 13001  
+admin-password = 1234  
+log-file = "/var/log/kannel/kannel.log"  
+log-level = 0  
+dlr-storage = internal  
+store-type = file  
+store-location = "/var/log/kannel/kannel.store"  
 
 group = smsbox
 bearerbox-host = "127.0.0.1"
