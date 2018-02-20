@@ -12,7 +12,6 @@ sudo gedit /etc/kannel/kannel.conf
 
 # пример конфига / config example
 
-# конфигурация ядра (bearerbox)
 
 group = core
 admin-port = 13000
@@ -53,7 +52,9 @@ enquire-link-interval = 200
 log-file = "/var/log/kannel/smsc-bulkness.log"
 log-level = 0
 
-# расшифровка
+
+
+# конфигурация ядра (bearerbox)
 
 group = core
 
