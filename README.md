@@ -23,35 +23,34 @@ dlr-storage = internal
 store-type = file  
 store-location = "/var/log/kannel/kannel.store"  
 
-group = smsbox
-bearerbox-host = "127.0.0.1"
-sendsms-port = 13003
+group = smsbox  
+bearerbox-host = "127.0.0.1"  
+sendsms-port = 13003  
 
-group = sendsms-user
-username = foo
-password = bar
-concatenation = true
-max-messages = 20
-default-smsc = gw-bulkness
+group = sendsms-user  
+username = foo  
+password = bar  
+concatenation = true  
+max-messages = 20  
+default-smsc = gw-bulkness  
 
-group = smsc
-smsc = smpp
-smsc-id = gw-bulkness
-smsc-admin-id = gw-bulkness
-allowed-smsc-id = gw-bulkness
-host = "smpp05.bulkness.com"
-port = 8887
-transceiver-mode = 1
-smsc-username = "vad261c1fc"
-smsc-password = "qwerty66"
-source-addr-autodetect = 1
-dest-addr-ton = 1
-dest-addr-npi = 1
-system-type = ""
-enquire-link-interval = 200
-log-file = "/var/log/kannel/smsc-bulkness.log"
-log-level = 0
-
+group = smsc  
+smsc = smpp  
+smsc-id = gw-bulkness  
+smsc-admin-id = gw-bulkness  
+allowed-smsc-id = gw-bulkness  
+host = "smpp05.bulkness.com"  
+port = 8887  
+transceiver-mode = 1  
+smsc-username = "login"  
+smsc-password = "password"  
+source-addr-autodetect = 1  
+dest-addr-ton = 1  
+dest-addr-npi = 1  
+system-type = ""  
+enquire-link-interval = 200  
+log-file = "/var/log/kannel/smsc-bulkness.log"  
+log-level = 0  
 
 
 # конфигурация ядра (bearerbox)
