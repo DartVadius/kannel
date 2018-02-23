@@ -69,7 +69,7 @@ log-level = 0 #уровень логирования 0 'debug', 1 'info', 2 'war
 
 dlr-storage = internal #система хранения сообщений (delivery report, DLR), поддерживает internal, mysql, pgsql, sdb, mssql, oracle
 
-store-type = file # система хранения сообщений перед обработкой, file - логи пишутся в один файл, spool - логи пишутся в отдельные файлы, она запись - один файл
+store-type = file # система хранения сообщений перед обработкой, file - сообщения пишутся в один файл, spool - сообщения пишутся в отдельные файлы, она запись - один файл
 
 store-location = "/var/log/kannel/kannel.store" # путь к логам, в зависимости от выбранного типа
 
